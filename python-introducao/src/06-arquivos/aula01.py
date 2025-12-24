@@ -10,7 +10,7 @@
 # r+ - leitura e escrita
 
 # abre o arquivo em modo de leitura
-# arquivo = open("python-introducao/src/06-arquivos/test.txt", "r")
+# arquivo = open("python-introducao/src/06-arquivos/aula01.txt", "r")
 
 # print(arquivo.readable())  # verifica se o arquivo pode ser lido
 # print(arquivo.read())      # lê todo o conteúdo do arquivo
@@ -24,19 +24,19 @@
 # print(lista[3])
 
 # escreve o conteúdo do arquivo
-# arquivo = open("python-introducao/src/06-arquivos/test.txt", "a")
+# arquivo = open("python-introducao/src/06-arquivos/aula01.txt", "a")
 # arquivo.write("C\n")
 # arquivo.write("C++\n")
 # arquivo.write("Terraform\n")
 
 # apaga o conteúdo do arquivo e escreve novos dados
-# arquivo = open("python-introducao/src/06-arquivos/test2.txt", "w")
+# arquivo = open("python-introducao/src/06-arquivos/aula01-2.txt", "w")
 # arquivo.write("C\n")
 # arquivo.write("C++\n")
 # arquivo.write("Terraform\n")
 
 # cria um novo arquivo e escreve dados nele
-# arquivo = open("python-introducao/src/06-arquivos/test3.txt", "x")
+# arquivo = open("python-introducao/src/06-arquivos/aula01-3.txt", "x")
 # arquivo.write("Python\n")
 
 
@@ -44,13 +44,13 @@
 
 # exclusão de arquivos
 
-import os
+# import os
 
 # remove o arquivo
-# if os.path.exists("python-introducao/src/06-arquivos/test2.txt"):
-#     os.remove("python-introducao/src/06-arquivos/test2.txt")
+# if os.path.exists("python-introducao/src/06-arquivos/aula01-2.txt"):
+#     os.remove("python-introducao/src/06-arquivos/aula01-2.txt")
 # else:
 #     print("O arquivo não existe")
 
 # remove um diretório vazio
-os.rmdir("python-introducao/src/06-arquivos/novapasta")
+# os.rmdir("python-introducao/src/06-arquivos/novapasta")

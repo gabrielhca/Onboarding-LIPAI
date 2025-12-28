@@ -61,8 +61,8 @@ projeto_teste = Projeto.contruir_com_string(entrada)
 print(projeto_teste)
 print(type(projeto_teste.codigo))
 
-projeto1 = Projeto("5", "Gabriel Henrique", "g@h.com")
-projeto2 = Projeto(5, "Gabriel Amorim", "g@a.com")
+projeto1 = Projeto("5", "Laboratório de Analise de Dados", "Samuel Costa")
+projeto2 = Projeto(5, "Laboratório de Desenvolvimento de IA", "Gabriel Amorim")
 
 conjunto_de_projetos = {projeto1, projeto2}
 print(f"Projeto1 == Projeto2? {projeto1 == projeto2}")

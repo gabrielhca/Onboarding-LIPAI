@@ -1,5 +1,8 @@
 """ Ex03 - Classe Participação """
 
+from ex01 import Aluno
+from ex02 import Projeto
+
 
 # classe participação
 class Participacao:
@@ -64,118 +67,6 @@ class Participacao:
 
     def __repr__(self):
         return f"Participação({self.codigo}, {self.data_inicio}, {self.data_fim}, {self.aluno}, {self.projeto})"
-
-
-# classe projeto
-class Projeto:
-    def __init__(self, codigo, titulo, responsavel):
-        self.codigo = codigo
-        self.titulo = titulo
-        self.responsavel = responsavel
-
-    # getter
-    @property
-    def titulo(self):
-        return self._titulo
-
-    @property
-    def responsavel(self):
-        return self._responsavel
-
-    @property
-    def codigo(self):
-        return self._codigo
-
-    # setter
-    @titulo.setter
-    def titulo(self, value):
-        if not value:
-            raise ValueError("Parametro obrigatorio")
-        self._titulo = value
-
-    @responsavel.setter
-    def responsavel(self, value):
-        if not value:
-            raise ValueError("Parametro obrigatorio")
-        self._responsavel = value
-
-    @codigo.setter
-    def codigo(self, value):
-        if not value or isinstance(value, str) and not value.isdigit():
-            raise ValueError("Parametro numerico obrigatorio")
-        self._codigo = int(value)
-
-    @classmethod
-    def contruir_com_string(cls, linha):
-        partes = linha.split(",")
-        return cls(codigo=partes[0].strip(), titulo=partes[1].strip(), responsavel=partes[2].strip())
-
-    def __eq__(self, value):
-        if isinstance(value, Projeto):
-            return self.codigo == value.codigo
-        return False
-
-    def __hash__(self):
-        return hash(self.codigo)
-
-    def __repr__(self):
-        return f"Projeto({self.codigo}, {self.titulo}, {self.responsavel})"
-
-
-# classe aluno
-class Aluno:
-    def __init__(self, prontuario, nome, email):
-        self.prontuario = prontuario
-        self.nome = nome
-        self.email = email
-
-    # getter
-    @property
-    def nome(self):
-        return self._nome
-
-    @property
-    def email(self):
-        return self._email
-
-    @property
-    def prontuario(self):
-        return self._prontuario
-
-    # setter
-    @nome.setter
-    def nome(self, value):
-        if not value:
-            raise ValueError("Parametro obrigatorio")
-        self._nome = value
-
-    @email.setter
-    def email(self, value):
-        if not value:
-            raise ValueError("Parametro obrigatorio")
-        self._email = value
-
-    @prontuario.setter
-    def prontuario(self, value):
-        if not value:
-            raise ValueError("Parametro obrigatorio")
-        self._prontuario = value
-
-    @classmethod
-    def contruir_com_string(cls, linha):
-        partes = linha.split(",")
-        return cls(prontuario=partes[0].strip(), nome=partes[1].strip(), email=partes[2].strip())
-
-    def __eq__(self, value):
-        if isinstance(value, Aluno):
-            return self.prontuario == value.prontuario
-        return False
-
-    def __hash__(self):
-        return hash(self.prontuario)
-
-    def __repr__(self):
-        return f"Aluno({self.prontuario}, {self.nome}, {self.email})"
 
 
 # exemplo de uso
